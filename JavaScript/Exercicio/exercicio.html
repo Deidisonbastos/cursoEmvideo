@@ -7,16 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Imagens/Paisagem/logo100.png" type="image/x-icon">
     <link rel="stylesheet" href="exercicio.css">
-    <title>Modelo de Exercicio!</title>
+    <title>Hora do Dia</title>
 </head>
 
-<body>
+<!-- Preciso colocar esse onload + function para carregar a informção do js-->
+<body onload="carregar()">
     <header>
-        <h1>Titulo</h1>
+        <h1>Hora do Dia</h1>
 
     </header>
     <section>
-        <div>Testando</div>
+        <div id="msg1">Aqui vai parecer a mensagem...</div>
+        <div id="foto">
+            <img id="imagem" src="/Banco de Imagens/amanhecer.png" alt="Foto do Dia">
+        </div>
 
     </section>
     <footer>
