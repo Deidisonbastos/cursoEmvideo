@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, Mundo!</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Entendo o DOM (Documento Object Model)
+        É um conjunto de objetos dentro do seu navegador que da acesso aos componentes internos do meu website
+    -->
+
+    <!-- Arvore DOM
+        Nagevando no elementos
+
+        posso selecionar os elementos através de: 
+        Por marca (tag)
+        getElementsByTagname()
+
+        Por ID
+        getelementByID()
+
+        Por Nome
+        getElementsbyName()
+
+        Por Classe
+        getElementsbyClassName()
+
+        Por Seletor 
+        querySelector()
+        querySelectorAll()
+    -->
+
+    <h1>Iniciando estudos de DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendo ao usar o <strong>DOM</strong> no JavaScript</p>
+    <div id=msg> clique e mim</div>
+
+    <script>
+        /* Aqui gero uma variavel e puxo o paragrafo 1 ou 2 com o getElementbytagname e faço alterações */
+        let p1 = document.getElementsByTagName("p")[1]
+        document.write(`Esta escrito assim <strong>${p1.innerText}</strong> <br/>`)
+        p1.style.color = "blue"
+
+        /* Aqui gero a variavel e puxo por ID. Sempre colocar o innertext */
+        let msg = document.getElementById("msg")
+        document.write(`${msg.innerText} <br/>`)
+        
+        /* Aqui uso por seletor. puxo a div msg para a mensagem. Como é ID é #, se fosse Class seria . */
+        let msg1 = document.querySelector("div#msg")
+        document.write(msg1.innerText)
+        msg1.style.background = "black"
+        msg1.style.color = "white"
+    </script>
+ 
+</body>
+
+</html>

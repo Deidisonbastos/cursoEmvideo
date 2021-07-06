@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, Mundo!</title>
+    <style>
+        div#areaDoClick {
+            font: normal 18pt arial;
+            background-color: rgb(51, 238, 176);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#areaDoClick2 {
+            font: normal 18pt arial;
+            background-color: rgb(51, 238, 176);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos em DOM</h1>
+
+    <div id="areaDoClick" onclick="clicar()" onmouseout="sair()" onmouseenter="entrar() ">
+        INTERAGINDO
+    </div>
+
+    <div id="areaDoClick2">
+        INTERAGINDO2
+    </div>
+
+
+
+    <!-- Eventos em JavaScript 
+    Existem varios eventos dentro de DOM que podem ser adcionados. 
+    Exemplo:
+    mouseenter = quando o mouse passa na div
+    mousemove = quando o mouse fica em movimento dentro da div
+    mousedown = quando clica e segura
+    mouseup = quando para de segurar 
+    mouseclick = quando recebe o click
+    mouseout = quando o mouse sai da div 
+
+    Podemos achar muitos eventos: https://developer.mozilla.org/pt-BR/docs/Web/Events
+-->
+
+    <script>
+
+        /* Aqui faço as interações com direto na minha div */
+        function clicar() {
+            let clicar = document.getElementById("areaDoClick")
+            clicar.innerText = "Clicou!!!!"
+            clicar.style.background = "red"
+        }
+
+        function sair() {
+            let sair = document.getElementById("areaDoClick")
+            sair.innerText = "saiu"
+            sair.style.background = "green"
+        }
+        function entrar() {
+            let entrar = document.getElementById("areaDoClick")
+            entrar.innerText = "entrou"
+            entrar.style.background = "purple"
+        }
+
+        /* Aqui faço o evento sem fazer alterações na div */
+        let evento = document.getElementById("areaDoClick2")
+        evento.addEventListener("click", clicar2)
+        evento.addEventListener("mouseenter", entrar2)
+        evento.addEventListener("mouseout", sair2)
+
+        function clicar2() {
+            evento.innerText = "Clicou!!!!"
+            evento.style.background = "red"
+        }
+
+        function sair2() {
+            evento.innerText = "saiu"
+            evento.style.background = "green"
+
+        }
+        function entrar2() {
+            evento.innerText = "entrou"
+            evento.style.background = "purple"
+        }
+
+
+    </script>
+</body>
+
+</html>

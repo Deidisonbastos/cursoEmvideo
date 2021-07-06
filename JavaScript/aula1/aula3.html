@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, Mundo!</title>
+</head>
+<body>
+    <script>
+        // Aqui altero as casas decimais do valor //
+        let n1 = 1543.5        
+            document.write(`${n1.toFixed(2)}<br/>`)
+        
+        // aqui altero as casas decimais do valor e altero o ponto por virgula//
+        let n2 = 2000.5
+            document.write(`${n2.toFixed(2).replace(".",",")} <br/> `)
+        // aqui alteto as casas decimais do valor, altero para virgula e add moeda //
+        let n3 = 5000.32
+            document.write(`${n3.toLocaleString("pt-br", {style: "currency", currency: "BRL"})}`)
+
+
+
+    </script>
+</body>
+</html>
