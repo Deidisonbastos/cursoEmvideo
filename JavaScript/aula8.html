@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/Paisagem/logo100.png" type="image/x-icon">
+    <title>Olá, Mundo</title>
+</head>
+
+<body>
+
+    <!-- Condições dentro de JavaScript 
+        if (Se - condição)
+        precisamos sempre criar um bloco {
+
+            } Esle (se não - condição) {
+    
+            }    -->
+
+
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro <input type="number" name="veloc" id="veloc"> em KM.
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <h1>Sabendo o pais</h1>
+    De qual país voce é? <input type="text" name="pais" id="pais">
+    <input type="button" value="Clique Aqui" onclick="qualPais()">
+    <div id="resultado2"></div>
+    <script>
+
+        function calcular() {
+            let velc = document.querySelector("input#veloc")
+            let res = document.querySelector("div#res")
+            let vel = Number(velc.value)
+            res.innerHTML = `Sua velocidade atual é de: <p><strong>${vel} KM/h </strong></p>`
+            if (vel > 100) {
+                res.innerHTML += `Você está <strong>MULTADO</strong> por excesso de velocidade`
+            }
+            res.innerHTML += `<p>Diriga sempre com cuidado!</p>`
+        }
+
+        function qualPais() {
+            let pais = document.querySelector("input#pais")
+            let resultado2 = document.querySelector("div#resultado2")
+            let pais1 = pais.value
+            resultado2.innerHTML = `Seu país é: ${pais1} `
+            if (pais1 != "Brasil") {
+                resultado2.innerHTML += `<p>Você não é Brasileiro, necessário apresentar passaporte! </p>`
+            } else {
+                resultado2.innerHTML += `<p>Você é Brasileiro, por favor seu RG!</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
